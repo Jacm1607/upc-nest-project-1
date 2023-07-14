@@ -24,4 +24,11 @@ export class AppController {
     return this.appService.show(id);
   }
 
+
+  // Edit
+  @Post(':id')
+  editProduct(@Param('id') id: string, @Body() request: Request) {
+    return this.appService.edit(id, request);
+  }
+
 }
